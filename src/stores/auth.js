@@ -146,8 +146,10 @@ export const useAuthStore = defineStore('auth', {
     initializeAuth() {
       if (this.token) {
         axios.defaults.headers.common['Authorization'] = `Bearer ${this.token}`
-        // In a real app, fetch user data here
-        // For demo purposes, set a mock user
+        // TODO: Replace with actual API call before production
+        // Example: const response = await axios.get('/api/auth/user')
+        //          this.user = response.data.user
+        // For demo purposes only - using mock user data
         this.user = {
           id: 1,
           name: 'Demo User',

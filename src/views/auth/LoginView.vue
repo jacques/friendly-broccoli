@@ -31,7 +31,8 @@ const login = async () => {
   }
 }
 
-// Demo login for testing purposes
+// TODO: Remove before production - Demo login for testing UI without backend
+// This bypasses authentication and should be removed when connecting to a real API
 const demoLogin = () => {
   localStorage.setItem('token', 'demo-token')
   authStore.initializeAuth()
